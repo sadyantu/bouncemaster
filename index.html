@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+        <div id="ui">
+            <div id="score">Score: 0</div>
+            <div id="highScore">High Score: 0</div>
+            <div id="speedLevel">Speed Level: 1</div>
+        </div>
+    </div>
+    
+    <!-- Menu Overlay -->
+    <div id="menuOverlay" class="overlay">
+        <div class="menu-content">
+            <h1>BOUNCE MASTER</h1>
+            <div class="menu-options">
+                <div class="menu-option" data-action="play">Play Game</div>
+                <div class="menu-option" data-action="highScore">High Score</div>
+                <div class="menu-option" data-action="achievements">Achievements</div>
+                <div class="menu-option" data-action="music">Music: ON</div>
+                <div class="menu-option" data-action="instructions">Instructions</div>
+                <div class="menu-option" data-action="quit">Quit</div>
+            </div>
+            <div class="menu-instructions">Use UP/DOWN arrows to navigate, ENTER to select</div>
+        </div>
+    </div>
+
+    <!-- Achievement Popup -->
+    <div id="achievementPopup" class="achievement-popup hidden">
+        <div class="achievement-content">
+            <h2>ACHIEVEMENT UNLOCKED!</h2>
+            <div id="achievementName"></div>
+        </div>
+    </div>
+
+    <!-- Instructions Overlay -->
+    <div id="instructionsOverlay" class="overlay hidden">
+        <div class="menu-content">
+            <h2>INSTRUCTIONS</h2>
+            <div class="instructions-list">
+                <p>Use UP/DOWN arrow keys to move your paddle</p>
+                <p>Hit the ball with your paddle to score points</p>
+                <p>Don't let the ball pass your paddle!</p>
+                <p>Try to beat your high score!</p>
+                <p>Press SPACEBAR to pause the game</p>
+                <p>Earn achievements by reaching score milestones!</p>
+                <p>Ball speed increases every 10 points!</p>
+                <p>Toggle music in the main menu</p>
+            </div>
+            <div class="menu-instructions">Press any key to go back</div>
+        </div>
+    </div>
+
+    <!-- High Score Overlay -->
+    <div id="highScoreOverlay" class="overlay hidden">
+        <div class="menu-content">
+            <h2>HIGH SCORE</h2>
+            <div id="highScoreDisplay" class="score-display">0</div>
+            <div class="menu-instructions">Press any key to go back</div>
+        </div>
+    </div>
+
+    <!-- Achievements Overlay -->
+    <div id="achievementsOverlay" class="overlay hidden">
+        <div class="menu-content">
+            <h2>ACHIEVEMENTS</h2>
+            <div id="achievementsList" class="achievements-list"></div>
+            <div class="menu-instructions">Press any key to go back</div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html> 
